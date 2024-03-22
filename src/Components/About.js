@@ -21,8 +21,8 @@ const About = () => {
         </div>
         <div className='section-text flex flex-col justify-center items-center p-3 mt-5'>
           <div className='texts flex flex-col justify-center items-start gap-5 max-w-96'>
-            <h1 className={`text-3xl lg:text-left text-center relative font-bold whitespace-nowrap  `}>
-              Front-end Developer<br/>
+            <h1 className={`text-2xl lg:text-left text-center relative font-bold  `}>
+              Front-end Developer
               based in Baku, Azerbaijan 📍
             </h1>
             <p className={`section-text-p1 font-medium`}>Hey, my name is Murad, and I'm a Frontend Developer. My passion is to create and develop a clean Web Site for my users. 📍</p>
