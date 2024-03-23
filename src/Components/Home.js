@@ -19,7 +19,7 @@ const Home = () => {
     <TrackVisibility
       once>
       {({ isVisible }) =>
-        <section id='hero' className='profile mx-auto pt-3 pb-6 w-full flex items-center'>
+        <section id="home" className='profile mx-auto pt-20 pb-6 w-full flex items-center'>
           <div className='w-full mx-auto lg:flex flex-col lg:flex-row-reverse justify-center items-center gap-10'>
             <div className={`section-profile-img  flex justify-center items-center p-3 ${ isVisible ? "animate__animated animate__fadeInRight" : " "}`}>
               <div className='img-container flex items-center w-80 h-80'>
@@ -33,8 +33,8 @@ const Home = () => {
                  {/* <img className='absolute bottom-0 right-10' width={55} src={waveemoji} alt='wave' />*/}</h1> 
                 <p className={`section-text-p1 lg:text-left text-center font-medium ${ isVisible ? "animate__animated animate__fadeInDown" : " "}`}>Hi, I'm Murad Balazada. A passionate Front-end React Developer based in Baku, Azerbaijan. 📍</p>
                 <div className={`socials flex items-center gap-3 ${ isVisible ? "animate__animated animate__fadeInDown" : " "}`}>
-                  <a className='text-black hover:text-blue-600 transition-all' href='https://github.com/muradbalayev' rel="noreferrer" target='_blank'><Icon icon={github} size={35}/></a>
-                  <a className='text-black hover:text-blue-600 transition-all' href='https://www.instagram.com/muraesthetic' rel="noreferrer" target='_blank'><Icon icon={instagram} size={40}/></a>
+                  <a className='text-black hover:text-blue-600 transition-all duration-300' href='https://github.com/muradbalayev' rel="noreferrer" target='_blank'><Icon icon={github} size={35}/></a>
+                  <a className='text-black hover:text-blue-600 transition-all duration-300' href='https://www.instagram.com/muraesthetic' rel="noreferrer" target='_blank'><Icon icon={instagram} size={40}/></a>
 
                 </div>
               </div>

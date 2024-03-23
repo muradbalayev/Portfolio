@@ -16,11 +16,11 @@ const Projects = () => {
       });
 
     return (
-        <section className='projects-section w-full mx-auto flex flex-col items-center py-10 '>
+        <section id="projects" className='projects-section w-full mx-auto flex flex-col items-center py-10 '>
             <h1 className={`text-center m-3 mb-3 text-4xl font-bold `}>Projects</h1>
             <div className='projects p-4 mt-10 mx-auto flex flex-col flex-wrap justify-center items-center gap-4'>
           <div className='cards p-2 w-full flex lg:flex-row flex-col justify-center flex-wrap gap-6'>
-           <div className='card rounded-3xl border border-slate-400 max-w-md px-3 py-5 flex flex-col justify-betwenn items-center'>
+           <div className='card rounded-3xl border border-slate-300 max-w-md px-3 py-5 flex flex-col justify-betwenn items-center'>
             <div className='card-img rounded-2xl max-w-92 h-56 border border-slate-900'>
             <img src={gymsite} alt='site'/>
             </div>
@@ -36,7 +36,7 @@ const Projects = () => {
                 </div>
             </div>
            </div>
-           <div className='card rounded-3xl border border-slate-400 max-w-md p-4 flex flex-col justify-betwenn items-center'>
+           <div className='card rounded-3xl border border-slate-300 max-w-md p-4 flex flex-col justify-betwenn items-center'>
             <div className='card-img rounded-2xl max-w-92 h-56 border border-slate-900'>
             <img src={weatherapp} alt='site'/>
             </div>
@@ -54,7 +54,7 @@ const Projects = () => {
                 </div>
             </div>
            </div>
-           <div className='card rounded-3xl border border-slate-400 max-w-md p-4 flex flex-col justify-betwenn items-center'>
+           <div className='card rounded-3xl border border-slate-300 max-w-md p-4 flex flex-col justify-betwenn items-center'>
             <div className='card-img rounded-2xl max-w-92 h-56 border border-slate-900'>
             <img src={proteinshop} alt='site'/>
             </div>
@@ -71,7 +71,7 @@ const Projects = () => {
                 </div>
             </div>
            </div>
-           <div className='card rounded-3xl border border-slate-400 max-w-md p-4 flex flex-col justify-betwenn items-center'>
+           <div className='card rounded-3xl border border-slate-300 max-w-md p-4 flex flex-col justify-betwenn items-center'>
             <div className='card-img rounded-2xl max-w-92 h-56 border border-slate-900'>
             <img src={restaurant} alt='site'/>
             </div>

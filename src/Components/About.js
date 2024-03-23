@@ -2,15 +2,13 @@
 import aboutimg from "./assets/about.jpeg"
 import circletext from "./assets/text2.svg"
 import workingemoji from "./assets/working-emoji.png"
-import TrackVisibility from 'react-on-screen'
 const About = () => {
   return (
-    <TrackVisibility>
-      {({ isVisible }) =>
-        <section id='about' className={`about mt-6 w-full mx-auto flex-col items-center justify-center `}>
-          <h1 className={`text-center m-3 mb-8 text-4xl font-bold ${isVisible ? 'animate__animated animate__fadeInUp' : ' '}`}>About Me</h1>
+ 
+        <section id="about" className={`about mt-6 w-full mx-auto flex-col items-center justify-center `}>
+          <h1 className={`text-center m-3 mb-8 text-4xl font-bold `}>About Me</h1>
           <div className='w-full mx-auto lg:flex flex-col lg:flex-row justify-center items-center gap-20'>
-            <div className={`section-about-img m-2 flex justify-center items-center ${isVisible ? 'animate__animated animate__fadeInLeft' : ' '}`}>
+            <div className={`section-about-img m-2 flex justify-center items-center `}>
               <div className='about-img md:max-w-md max-w-80  relative'>
                 <img className='aboutimg' src={aboutimg} alt='img' />
                 <img className='absolute bottom-0 right-0 z-10' width={65} src={workingemoji} alt='text' />
@@ -19,9 +17,9 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className={`section-text flex flex-col justify-center lg:items-start items-center p-3 mt-5 ${isVisible ? 'animate__animated animate__fadeInRight' : ' '}`}>
+            <div className={`section-text flex flex-col justify-center lg:items-start items-center p-3 mt-5`}>
               <div className='texts p-2 flex flex-col justify-center items-start gap-5 max-w-96'>
-                <h1 className='text-2xl lg:text-left text-center relative font-bold  '>
+                <h1 className='text-2xl text-center relative font-bold  '>
                   Front-end Developer
                   based in Baku, Azerbaijan 📍
                 </h1>
@@ -41,8 +39,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </section>}
-    </TrackVisibility>
+        </section>
   )
 }
 
