@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Icon } from 'react-icons-kit'
 import { alignRight } from 'react-icons-kit/feather/alignRight'
 import { close } from 'react-icons-kit/ionicons/close'
+import { Link } from 'react-scroll'
+
 const Navbar = () => {
   const [open, setOpen] = useState(false)
 
@@ -12,11 +14,27 @@ const Navbar = () => {
           <h3 className='font-bold cursor-pointer relative'>Murad.dev</h3>
         </div>
         <div className='nav-right md:block hidden'>
-          <ul className='flex list-none gap-3'>
-            <li className='font-bold cursor-pointer hover:text-white hover:bg-slate-900'>Contact</li>
-            <li className='font-bold cursor-pointer hover:text-white hover:bg-slate-900'> Home</li>
-            <li className='font-bold cursor-pointer hover:text-white hover:bg-slate-900'>About</li>
-            <li className='font-bold cursor-pointer hover:text-white hover:bg-slate-900'>Projects</li>
+          <ul className='flex list-none'>
+            <li className='font-bold cursor-pointer hover:text-white hover:bg-slate-900' >
+              <Link to="/hero" spy={true} smooth={true} offset={50} duration={500}>
+                Home
+              </Link>
+            </li>
+            <li className='font-bold cursor-pointer hover:text-white hover:bg-slate-900' >
+              <Link to="/about" spy={true} smooth={true} offset={50} duration={500} >
+                About
+              </Link>
+            </li>
+            <li className='font-bold cursor-pointer hover:text-white hover:bg-slate-900' >
+              <Link to="/Skills" spy={true} smooth={true} offset={50} duration={500} /*onSetActive={handleSetActive}*/>
+                Skills
+              </Link>
+            </li>
+            <li className='font-bold cursor-pointer hover:text-white hover:bg-slate-900' >
+              <Link to="/projects" spy={true} smooth={true} offset={50} duration={500} >
+                Projects
+              </Link>
+            </li>
           </ul>
         </div>
         <button onClick={() => { setOpen(true) }}
@@ -30,13 +48,13 @@ const Navbar = () => {
           className={`p-1 transition-colors absolute hover:text-red-500 top-5 right-5 z-50 ${open ? 'block' : 'hidden'}`}>
           <Icon icon={close} size={30} />
         </button>
-<div className={`w-full relative ${open ? 'block' : 'hidden'}`}>
-        <ul className='list-none w-full'>
-          <li className='font-bold text-center text-2xl cursor-pointer text-white hover:bg-slate-900'>Contact</li>
-          <li className='font-bold text-center text-2xl cursor-pointer text-white hover:bg-slate-900'> Home</li>
-          <li className='font-bold text-center text-2xl cursor-pointer text-white hover:bg-slate-900'>About</li>
-          <li className='font-bold text-center text-2xl cursor-pointer text-white hover:bg-slate-900'>Projects</li>
-        </ul>
+        <div className={`w-full relative ${open ? 'block' : 'hidden'}`}>
+          <ul className='list-none w-full'>
+            <li className='font-bold text-center text-2xl cursor-pointer text-white hover:bg-slate-900'>Contact</li>
+            <li className='font-bold text-center text-2xl cursor-pointer text-white hover:bg-slate-900'> Home</li>
+            <li className='font-bold text-center text-2xl cursor-pointer text-white hover:bg-slate-900'>About</li>
+            <li className='font-bold text-center text-2xl cursor-pointer text-white hover:bg-slate-900'>Projects</li>
+          </ul>
         </div>
       </div>
 
