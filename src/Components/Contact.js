@@ -36,7 +36,7 @@ const Contact = () => {
 </div>
 </div>
 </div>
-<p>Copyright © 2023 Murad Balazade. All Rights Reserved.</p>
+<p className='text-center'>Copyright © 2023 Murad Balazade. All Rights Reserved.</p>
         </section>
     )
 }
