@@ -34,7 +34,7 @@ const Home = () => {
                 <p className={`section-text-p1 lg:text-left text-center font-medium ${ isVisible ? "animate__animated animate__fadeInDown" : " "}`}>Hi, I'm Murad Balazada. A passionate Front-end React Developer based in Baku, Azerbaijan. 📍</p>
                 <div className={`socials flex items-center gap-3 ${ isVisible ? "animate__animated animate__fadeInDown" : " "}`}>
                   <a className='text-black hover:text-blue-600 transition-all duration-300' href='https://github.com/muradbalayev' rel="noreferrer" target='_blank'><Icon icon={github} size={35}/></a>
-                  <a className='text-black hover:text-blue-600 transition-all duration-300' href='https://www.instagram.com/muraesthetic' rel="noreferrer" target='_blank'><Icon icon={instagram} size={40}/></a>
+                  <a className='text-black hover:text-blue-600 transition-all duration-300' href='https://www.instagram.com/muraesthetics' rel="noreferrer" target='_blank'><Icon icon={instagram} size={40}/></a>
 
                 </div>
               </div>
