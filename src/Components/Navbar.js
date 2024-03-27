@@ -20,22 +20,22 @@ const Navbar = () => {
                 Home
             </li>
               </Link>
-              <Link to="about" smooth={true} duration={200}>
+              <Link to="about" smooth={true} offset={-50} duration={200}>
             <li className='font-bold rounded cursor-pointer '>
                 About
             </li>
               </Link>
-              <Link to="skills" smooth={true} duration={200}>
+              <Link to="skills" smooth={true} offset={-50} duration={200}>
             <li className='font-bold rounded cursor-pointer '>
                 Skills
             </li>
               </Link>
-              <Link to="projects" smooth={true} duration={200}>
+              <Link to="projects" smooth={true} offset={-50} duration={200}>
             <li className='font-bold rounded cursor-pointer '>
                 Projects
             </li>
               </Link>
-              <Link to="contact" smooth={true} duration={200}>
+              <Link to="contact" smooth={true} offset={-50} duration={200}>
             <li className='font-bold rounded cursor-pointer '>
                 Contact
             </li>
@@ -60,22 +60,22 @@ const Navbar = () => {
                 Home
             </li>
               </Link>
-            <Link className="text-white" to="about" smooth={true} duration={300}>
+            <Link className="text-white" to="about" smooth={true} offset={-50} duration={300}>
             <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
                 About
             </li>
               </Link>
-            <Link className="text-white" to="skills" smooth={true} duration={300}>
+            <Link className="text-white" to="skills" smooth={true} offset={-50} duration={300}>
             <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
                 Skills
             </li>
               </Link>
-            <Link className="text-white" to="projects" smooth={true} duration={300}>
+            <Link className="text-white" to="projects" smooth={true} offset={-50} duration={300}>
             <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
                 Projects
             </li>
               </Link>
-            <Link className="text-white" to="contact" smooth={true} duration={300}>
+            <Link className="text-white" to="contact" smooth={true} offset={-50} duration={300}>
             <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
                 Contact
             </li>
