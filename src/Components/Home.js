@@ -30,7 +30,7 @@ const Home = () => {
               <div className='texts flex flex-col justify-center lg:items-start items-center gap-5 max-w-96'>
                 <h1 className={`text-5xl relative lg:text-left text-center font-bold  ${ isVisible ? "animate__animated animate__fadeInUp" : " "}`}>
                   Front-End<span className='text-blue-600'> Devel{text}</span>  <Cursor cursorColor='blue'/> 🖥️ 
-                 {/* <img className='absolute bottom-0 right-10' width={55} src={waveemoji} alt='wave' />*/}</h1> 
+                 </h1> 
                 <p className={`section-text-p1 lg:text-left text-center font-medium ${ isVisible ? "animate__animated animate__fadeInDown" : " "}`}>Hi, I'm Murad Balazada. A passionate Front-end React Developer based in Baku, Azerbaijan. 📍</p>
                 <div className={`socials flex items-center gap-3 ${ isVisible ? "animate__animated animate__fadeInDown" : " "}`}>
                   <a className='text-black hover:text-blue-600 transition-all duration-300' href='https://github.com/muradbalayev' rel="noreferrer" target='_blank'><Icon icon={github} size={35}/></a>

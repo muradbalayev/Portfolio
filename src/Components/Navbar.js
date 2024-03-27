@@ -15,31 +15,31 @@ const Navbar = () => {
         </div>
         <div className='nav-right md:block hidden'>
         <ul className='flex list-none gap-2'>
+              <Link to="home" smooth={true} duration={200}>
             <li className='font-bold rounded cursor-pointer '>
-              <Link to="home" smooth={true} duration={100}>
                 Home
-              </Link>
             </li>
+              </Link>
+              <Link to="about" smooth={true} duration={200}>
             <li className='font-bold rounded cursor-pointer '>
-              <Link to="about" smooth={true} duration={100}>
                 About
-              </Link>
             </li>
+              </Link>
+              <Link to="skills" smooth={true} duration={200}>
             <li className='font-bold rounded cursor-pointer '>
-              <Link to="skills" smooth={true} duration={100}>
                 Skills
-              </Link>
             </li>
+              </Link>
+              <Link to="projects" smooth={true} duration={200}>
             <li className='font-bold rounded cursor-pointer '>
-              <Link to="projects" smooth={true} duration={100}>
                 Projects
-              </Link>
             </li>
+              </Link>
+              <Link to="contact" smooth={true} duration={200}>
             <li className='font-bold rounded cursor-pointer '>
-              <Link to="contact" smooth={true} duration={100}>
                 Contact
-              </Link>
             </li>
+              </Link>
           </ul>
         </div>
         <button onClick={() => { setOpen(true) }}
@@ -55,31 +55,31 @@ const Navbar = () => {
         </button>
         <div className={`w-full relative ${open ? 'block' : 'hidden'}`}>
           <ul className='list-none w-full text-white'>
-            <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
             <Link className="text-white" to="home" smooth={true} duration={300}>
+            <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
                 Home
-              </Link>
             </li>
-            <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
+              </Link>
             <Link className="text-white" to="about" smooth={true} duration={300}>
+            <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
                 About
-              </Link>
             </li>
-            <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
+              </Link>
             <Link className="text-white" to="skills" smooth={true} duration={300}>
+            <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
                 Skills
-              </Link>
             </li>
-            <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
+              </Link>
             <Link className="text-white" to="projects" smooth={true} duration={300}>
-                Projects
-              </Link>
-            </li>
             <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
-            <Link className="text-white" to="contact" smooth={true} duration={300}>
-                Contact
-              </Link>
+                Projects
             </li>
+              </Link>
+            <Link className="text-white" to="contact" smooth={true} duration={300}>
+            <li className='font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900'>
+                Contact
+            </li>
+              </Link>
           </ul>
         </div>
       </div>
