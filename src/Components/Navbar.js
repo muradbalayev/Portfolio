@@ -20,7 +20,7 @@ const Navbar = () => {
                 Home
             </li>
               </Link>
-              <Link to="about" smooth={true} offset={-50} duration={200}>
+              <Link to="about" smooth={true} offset={-100} duration={200}>
             <li className='font-bold rounded cursor-pointer '>
                 About
             </li>
