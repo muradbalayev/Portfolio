@@ -9,7 +9,7 @@ import { useTypewriter } from 'react-simple-typewriter'
 
 const cardData = [
     {
-      title: 'Iticket Clone w/React + Vite + Tailwind',
+      title: 'iTicket.AZ Clone w/React + Vite + Tailwind',
       image: iticket,
       demoLink: 'https://iticketclonebymourad.vercel.app',
       githubLink: 'https://github.com/muradbalayev/iticketclone'
