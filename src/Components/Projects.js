@@ -62,20 +62,20 @@ const Projects = () => {
             <div className='projects p-4 mt-10 mx-auto flex flex-col flex-wrap justify-center items-center gap-4'>
                 <div className='cards p-2 w-full flex lg:flex-row flex-col justify-center flex-wrap gap-6'>
                 {cardData.map((card, index) => (
-                    <div className='card rounded-3xl border border-slate-300 max-w-md p-4 flex flex-col justify-betwenn items-center'>
-                        <div className='card-img rounded-2xl max-w-92 h-56 border border-slate-900'>
+                    <div className='card rounded-xl border border-slate-300 max-w-md p-4 flex flex-col justify-betwenn items-center'>
+                        <div className='card-img rounded-xl max-w-92 h-56 border shadow-md'>
                             <img src={card.image} alt='site' />
                         </div>
                         <div className='card-text mt-2 w-full p-3 flex flex-col justify-between items-center gap-3'>
                             <p className='card-title font-medium text-center'>{card.title}</p>
                             <div className='buttons flex gap-3'>
                                     <a target='_blank' rel="noreferrer" href={card.demoLink}>
-                                <button className='py-2 px-5 border hover:text-white hover:scale-110 hover:bg-black rounded-xl transition-all duration-300 ease-linear bg-white font-semibold'>
+                                <button className='py-2 px-5 border hover:text-white hover:scale-110 hover:bg-black rounded-lg transition-all duration-300 ease-linear bg-white font-semibold'>
                                         Demo
                                 </button>
                                         </a>
                                     <a target='_blank' rel="noreferrer" href={card.githubLink}>
-                                <button className='py-2 px-5 group border hover:text-white hover:scale-110 hover:bg-black rounded-xl transition-all duration-300 ease-linear bg-white font-semibold'>
+                                <button className='py-2 px-5 group border hover:text-white hover:scale-110 hover:bg-black rounded-lg transition-all duration-300 ease-linear bg-white font-semibold'>
                                         Github
                                 </button>
                                         </a>
