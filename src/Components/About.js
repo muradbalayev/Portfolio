@@ -32,9 +32,12 @@ const About = () => {
                 <p className='font-medium lg:text-left text-center'><b>University</b>: ASOIU</p>
                 <p className='font-medium lg:text-left text-center'><b>Email</b>: muradbalazade6@gmail.com</p>
               </div>
-              <div className='w-80 mt-6 rounded-xl border-2 border-gray-400 flex flex-col items-center justify-center p-3 '>
-                <p className='text-black font-medium'>Experience: 1+ years</p>
-                <p className='text-black font-medium'>Front-end Development</p>
+              <div className=' mt-6 rounded-xl border-2 border-gray-400 flex flex-col text-left justify-center p-3 '>
+                <p className='text-black font-medium text-center'>Experience: Front-end Development</p>
+                <p className='text-black font-base text-left'>Front-end Developer - EvoCoding</p>
+                <p className='text-black font-base text-left'>Front-end Developer - Algorithmics</p>
+                <p className='text-black font-base'>Front-end Developer - Caspian Innovation Center</p>
+
 
               </div>
             </div>
