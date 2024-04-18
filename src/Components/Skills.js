@@ -9,9 +9,10 @@ import githubpng from "./assets/github.png"
 import netlifypng from "./assets/netlify.png"
 import postmanpng from "./assets/postman.png"
 import reduxpng from "./assets/redux.svg"
-import materialuipng from "./assets/materialui.png"
+import vite from "./assets/vite.png"
 import tailwindpng from "./assets/tailwind.png"
 import typescriptpng from "./assets/typescript.svg"
+import next from "./assets/next.png"
 
 // import TrackVisibility from 'react-on-screen'
 
@@ -50,8 +51,12 @@ const Skills = () => {
                     <p className=' font-semibold'>React</p>
                 </div>
                 <div className='skills-container  py-2 px-4 border border-slate-400 rounded-2xl w-32 h-16 flex justify-center items-center gap-2'>
-                    <img src={materialuipng} alt='skill' width={35} />
-                    <p className=' font-semibold'>Material</p>
+                    <img src={next} alt='skill' width={35} />
+                    <p className=' font-semibold'>Next.js</p>
+                </div>
+                <div className='skills-container  py-2 px-4 border border-slate-400 rounded-2xl w-32 h-16 flex justify-center items-center gap-2'>
+                    <img src={vite} alt='skill' width={35} />
+                    <p className=' font-semibold'>Vite</p>
                 </div>
                 <div className='skills-container py-2 px-4 border border-slate-400 rounded-2xl w-32 h-16 flex justify-center items-center gap-2'>
                     <img src={githubpng} alt='skill' width={35} />
