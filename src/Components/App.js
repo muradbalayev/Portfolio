@@ -1,12 +1,12 @@
 import './App.css';
 import 'animate.css';
-import Home from './Home';
-import Navbar from './Navbar';
-import About from './About';
-import Skills from './Skills';
-import Projects from './Projects';
-import Contact from './Contact';
-import Footer from './Footer';
+import Home from './pages/Home';
+import Navbar from './pages/Navbar';
+import About from './pages/About';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import Footer from './pages/Footer';
 
 function App() {
   return (

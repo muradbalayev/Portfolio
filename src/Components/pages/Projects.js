@@ -1,10 +1,11 @@
 import React from 'react'
-import iticket from './assets/iticket.png'
-import gymsite from "./assets/gymsite.png"
-import weatherapp from "./assets/weatherapp.png"
-import proteinshop from "./assets/proteinshop.png"
-import restaurant from "./assets/restaurant.png"
-import azerqaz from './assets/azerqaz.png'
+import iticket from '../assets/iticket.png'
+import gymsite from "../assets/gymsite.png"
+import weatherapp from "../assets/weatherapp.png"
+import proteinshop from "../assets/proteinshop.png"
+import restaurant from "../assets/restaurant.png"
+import azerqaz from '../assets/azerqaz.png'
+import todoapp from '../assets/todoapp.png'
 import { useTypewriter } from 'react-simple-typewriter'
 
 const cardData = [
@@ -19,6 +20,12 @@ const cardData = [
       image: azerqaz,
       demoLink: 'https://azerqaz.netlify.app',
       githubLink: 'https://github.com/muradbalayev/Azerqaz'
+    },
+    {
+      title: 'FullStack ToDo App w/Next.JS + MongoDB',
+      image: todoapp,
+      demoLink: 'https://todo-app-mongo.vercel.app',
+      githubLink: 'https://github.com/muradbalayev/TodoApp-Next.js-Mongo'
     },
     {
       title: 'Responsive Multi-Page Gym Website with HTML, CSS, and JS',

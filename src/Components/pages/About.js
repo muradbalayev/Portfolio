@@ -1,7 +1,7 @@
         import React from 'react'
-import aboutimg from "./assets/about.jpeg"
-import circletext from "./assets/text2.svg"
-import workingemoji from "./assets/working-emoji.png"
+import aboutimg from "../assets/about.jpeg"
+import circletext from "../assets/text2.svg"
+import workingemoji from "../assets/working-emoji.png"
 const About = () => {
   return (
  

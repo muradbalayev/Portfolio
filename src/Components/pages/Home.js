@@ -1,5 +1,5 @@
 import React from 'react'
-import profileimage from "./assets/profile.jpeg"
+import profileimage from "../assets/profile.jpeg"
 import {github} from 'react-icons-kit/icomoon/github'
 import {instagram} from 'react-icons-kit/fa/instagram'
 import TrackVisibility from 'react-on-screen';
