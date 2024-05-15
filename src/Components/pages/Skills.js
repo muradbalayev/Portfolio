@@ -13,6 +13,10 @@ import vite from "../assets/vite.png"
 import tailwindpng from "../assets/tailwind.png"
 import typescriptpng from "../assets/typescript.svg"
 import next from "../assets/next.png"
+import mongo from "../assets/mongo.png"
+import node from "../assets/node.png"
+import express from "../assets/express.png"
+import chakra from "../assets/chakra.jpg"
 
 // import TrackVisibility from 'react-on-screen'
 
@@ -78,7 +82,22 @@ const Skills = () => {
                     <img src={netlifypng} alt='skill' width={35} />
                     <p className=' font-semibold'>Netlify</p>
                 </div>
-                
+                <div className='skills-container  py-2 px-4 border border-slate-400 rounded-2xl w-32 h-16 flex justify-center items-center gap-2'>
+                    <img src={mongo} alt='skill' width={35} />
+                    <p className=' font-semibold'>MongoDB</p>
+                </div>
+                <div className='skills-container  py-2 px-4 border border-slate-400 rounded-2xl w-32 h-16 flex justify-center items-center gap-2'>
+                    <img src={node} alt='skill' width={35} />
+                    <p className=' font-semibold'>Node.js</p>
+                </div>
+                <div className='skills-container  py-2 px-4 border border-slate-400 rounded-2xl w-32 h-16 flex justify-center items-center gap-2'>
+                    <img src={express} alt='skill' width={35} />
+                    <p className=' font-semibold'>Express.js</p>
+                </div> 
+                <div className='skills-container  py-2 px-4 border border-slate-400 rounded-2xl w-32 h-16 flex justify-center items-center gap-2'>
+                    <img src={chakra} alt='skill' width={35} />
+                    <p className=' font-semibold'>ChakraUI</p>
+                </div>
             </div>
 
         </section>
