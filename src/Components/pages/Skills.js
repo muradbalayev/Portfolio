@@ -22,8 +22,8 @@ import chakra from "../assets/chakra.jpg"
 
 const Skills = () => {
     return (
-        <section id="skills" className='skills-section w-full mx-auto flex flex-col items-center pt-10'>
-            <h1 className={`text-center m-3 mb-3 text-4xl font-bold `}>Skills</h1>
+        <section id="skills" className='skills-section w-full mx-auto flex flex-col items-center py-10'>
+            <h1 className={`text-center m-3 mb-10 text-4xl font-bold `}>Skills</h1>
             <p className='p-2 text-center'>Here are some of my skills on which I have been working on for the past 1 years.</p>
             <div className='skills w-4/5 p-4 mt-10 mx-auto flex flex-wrap justify-center items-center border rounded-3xl border-slate-400 gap-4 shadow-md'>
                 <div className='skills-container py-2 px-4 border border-slate-400 rounded-2xl w-32 h-16 flex justify-center items-center gap-2'>

@@ -5,7 +5,7 @@ import {map2} from 'react-icons-kit/icomoon/map2'
 import {ic_email_outline} from 'react-icons-kit/md/ic_email_outline'
 const Contact = () => {
     return (
-        <section id="contact" className='contact-section w-full mx-auto flex flex-col items-center py-10 px-2'>
+        <section id="contact" className='contact-section w-full mx-auto flex flex-col items-center py-36 px-2 my-10'>
             <h1 className='text-3xl text-blue-600 font-bold'>Contact Me</h1>
 <div className='contacts w-full h-full flex lg:flex-row flex-col justify-center items-center gap-4 p-4 my-8'>
 <div className='contact flex items-center ps-4 p-2 min-h-20 w-80 border rounded-lg gap-5'>

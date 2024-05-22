@@ -5,7 +5,7 @@ import workingemoji from "../assets/working-emoji.png"
 const About = () => {
   return (
  
-        <section id="about" className={`about mt-6 w-full mx-auto flex-col items-center justify-center `}>
+        <section id="about" className={`about w-full mx-auto flex-col items-center justify-center py-10 `}>
           <h1 className={`text-center m-3 mb-8 text-4xl font-bold `}>About Me</h1>
           <div className='w-full mx-auto lg:flex flex-col lg:flex-row justify-center items-center gap-20'>
             <div className={`section-about-img m-2 flex justify-center items-center `}>

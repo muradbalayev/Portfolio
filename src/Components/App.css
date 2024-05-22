@@ -13,15 +13,22 @@
   width: 100%;
   max-width: 1920px;
 }
-p, a {
+p,
+a {
   color: rgb(85, 85, 85);
-  transition: .3 ease;
+  transition: 0.3 ease;
 }
 
-h1, h3 {
+h1,
+h3 {
   color: #2d2e32;
 }
 
+.active {
+  background-color: #2d2e32 !important;
+  color: white;
+  border-radius: 4px;
+}
 
 .icon {
   height: 2rem;
@@ -33,30 +40,27 @@ nav {
   padding: 0.5rem 2rem;
 }
 
-ul li:hover{
+ul li:hover {
   color: white;
-  background-color: #2d2e32!important;
+  background-color: #2d2e32 !important;
 }
 
 .name {
   color: #2d2e32;
 }
 
-
-li{
+li {
   padding: 0.6rem 1.2rem;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
-.navbar{
+.navbar {
   background-color: #37383de1;
 }
 
-nav li:hover a{
+nav li:hover a {
   color: white;
 }
-
-
 
 .name:after {
   content: "";
@@ -72,13 +76,9 @@ nav li:hover a{
   background-color: black;
 }
 
-
-
-
-
 /* PROFILE */
 .profile {
-  min-height: 100vh;
+  min-height: 90vh;
   background-color: #f9f9f9;
   overflow: hidden;
 }
@@ -87,11 +87,11 @@ nav li:hover a{
   overflow: hidden;
   clip-path: circle(50%);
   animation: animate 5s ease-in-out infinite;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
 }
 
-.img-container:hover{
+.img-container:hover {
   scale: 1.07;
 }
 
@@ -107,15 +107,13 @@ nav li:hover a{
   }
 }
 
-
-
 /* ABOUT */
-.about{  
-    min-height: 85vh;
-    overflow: hidden;
+.about {
+  min-height: 85vh;
+  overflow: hidden;
 }
 
-.circle{
+.circle {
   background-color: white;
   clip-path: circle(50%);
   animation: rotate 9s linear infinite;
@@ -124,49 +122,44 @@ nav li:hover a{
 .aboutimg {
   object-fit: cover;
   border-radius: 2rem;
-
 }
 
- /* Skills  */
-.skills-section{
+/* Skills  */
+.skills-section {
   min-height: 85vh;
-  
 }
 
-.skills{
+.skills {
   background-color: #f9f9f9c1;
   min-height: 40vh;
   overflow: hidden;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
-
-.skills-container{
-  transition: .3s ease;
+.skills-container {
+  transition: 0.3s ease;
   background-color: white;
   user-select: none;
 }
 
-.skills-container:hover{
+.skills-container:hover {
   scale: 1.15;
 }
 
-
 /* Experience */
 
-.projects-section{
+.projects-section {
   min-height: 100vh;
-
 }
 
-.projects{
+.projects {
   overflow: hidden;
 }
 
-.card-img{
+.card-img {
   overflow: hidden;
 }
-.card img{
+.card img {
   object-fit: cover;
   min-width: 80%;
   min-height: 100%;
@@ -174,21 +167,19 @@ nav li:hover a{
 }
 
 /* Contact */
-.contact-section{
+.contact-section {
   background-color: #f9f9f9c1;
 
-    min-height: 60vh;
+  min-height: 60vh;
 }
 
 /* Footer */
-footer{
+footer {
   background-color: #2d2e32;
 }
 
-
-@keyframes rotate{
+@keyframes rotate {
   100% {
     transform: rotate(1turn);
+  }
 }
-}
-
