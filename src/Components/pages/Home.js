@@ -1,5 +1,5 @@
 import React from 'react'
-import profileimage from "../assets/profile.jpeg"
+import profileimage from "../assets/me.jpeg"
 import {github} from 'react-icons-kit/icomoon/github'
 import {instagram} from 'react-icons-kit/fa/instagram'
 import TrackVisibility from 'react-on-screen';
@@ -22,13 +22,13 @@ const Home = () => {
         <section id="home" className='profile mx-auto pt-20 pb-6 w-full flex items-center'>
           <div className='w-full mx-auto lg:flex flex-col lg:flex-row-reverse justify-center items-center gap-10'>
             <div className={`section-profile-img  flex justify-center items-center p-3 ${ isVisible ? "animate__animated animate__fadeInRight" : " "}`}>
-              <div className='img-container flex items-center w-80 h-80'>
+              <div className='img-container flex items-center sm:w-80 sm:h-80 h-72 w-72'>
                 <img src={profileimage} alt='profileimage' />
               </div>
             </div>
             <div className='section-text flex justify-center items-center p-3'>
               <div className='texts flex flex-col justify-center lg:items-start items-center gap-5 max-w-96'>
-                <h1 className={`text-5xl relative lg:text-left text-center font-bold  ${ isVisible ? "animate__animated animate__fadeInUp" : " "}`}>
+                <h1 className={`md:text-5xl sm:text-4xl text-2xl relative lg:text-left text-center font-bold  ${ isVisible ? "animate__animated animate__fadeInUp" : " "}`}>
                   Front-End<span className='text-blue-600'> Devel{text}</span>  <Cursor cursorColor='blue'/> 🖥️ 
                  </h1> 
                 <p className={`section-text-p1 lg:text-left text-center font-medium ${ isVisible ? "animate__animated animate__fadeInDown" : " "}`}>Hi, I'm Murad Balazada. A passionate Front-end React Developer based in Baku, Azerbaijan. 📍</p>

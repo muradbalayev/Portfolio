@@ -18,25 +18,27 @@ const About = () => {
               </div>
             </div>
             <div className={`section-text flex flex-col justify-center lg:items-start items-center p-3 mt-5`}>
-              <div className='texts p-2 flex flex-col justify-center items-start gap-5 max-w-96'>
-                <h1 className='text-2xl text-center relative font-bold  '>
+              <div className='w-full mx-auto texts sm:text-lg text-base p-2 flex flex-col justify-center items-start gap-5 max-w-96'>
+                <h1 className='sm:text-2xl text-xl text-center relative font-bold  '>
                   Front-end Developer
                   based in Baku, Azerbaijan 📍
                 </h1>
-                <p className='section-text-p1 font-medium lg:text-start text-center'>Hey, my name is Murad, and I'm a Frontend Developer. My passion is to create and develop a clean Web Site for my users. 📍</p>
-                <p className='section-text-p1 font-medium lg:text-start text-center'>My main stack currently is React.js in combination with Tailwind CSS and TypeScript.</p>
+                <p className=' font-medium lg:text-start text-center'>Hey, my name is Murad, I'm 21, and I'm a Frontend Developer. My passion is to create and develop a clean Web Site for my users. 📍</p>
+                <p className=' font-medium lg:text-start text-center'>My main stack currently is React.js, Redux in combination with Tailwind CSS and Material</p>
               </div>
-              <div className='w-full flex flex-col justify-center p-2'>
-                <p className='font-medium lg:text-left text-center'><b>Name</b>: Murad Balazada</p>
-                <p className='font-medium lg:text-left text-center'><b>Education</b>: Process Automation Engineer</p>
-                <p className='font-medium lg:text-left text-center'><b>University</b>: ASOIU</p>
-                <p className='font-medium lg:text-left text-center'><b>Email</b>: muradbalazade6@gmail.com</p>
+              <div className=' flex flex-col mx-auto justify-center sm:text-lg text-base p-2'>
+                <p className='font-medium text-left'><b>Name</b>: Murad Balazada</p>
+                <p className='font-medium text-left'><b>Education</b>: Process Automation Engineer</p>
+                <p className='font-medium text-left'><b>University</b>: ASOIU</p>
+                <p className='font-medium text-left'><b>Email</b>: muradbalazade6@gmail.com</p>
               </div>
-              <div className=' mt-6 rounded-xl border-2 border-gray-400 flex flex-col text-left justify-center p-3 '>
-                <p className='text-black font-medium text-center'>Experience: Front-end Development</p>
-                <p className='text-black font-base text-left'>Front-end Developer - EvoCoding</p>
-                <p className='text-black font-base text-left'>Front-end Developer - Algorithmics</p>
-                <p className='text-black font-base'>Front-end Developer - Caspian Innovation Center</p>
+              <div className=' mt-6 rounded-xl sm:text-lg text-sm border-2 border-gray-400 flex flex-col justify-start p-3 '>
+                <p className='text-black font-medium text-left poppins'>Experience: Front-end Development</p>
+                <p className='text-black font-base text-left poppins'>Front-end Dev Course - EvoCoding | 2022</p>
+                <p className='text-black font-base text-left poppins'>Front-end Dev Course - Algorithmics | 2023</p>
+                <p className='text-black font-base poppins'>Front-end Dev Intern - Caspian Innovation Center | 2024</p>
+                <p className='text-black font-base poppins'>Front-end Dev Mentor - EvoAcademy | 2024 - Still</p>
+                <p className='text-black font-base poppins'>Front-end Dev - CoffeeMe | 2024 - Still</p>
 
 
               </div>
