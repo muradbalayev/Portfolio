@@ -19,7 +19,7 @@ const Home = () => {
     <TrackVisibility
       once>
       {({ isVisible }) =>
-        <section id="home" className='profile mx-auto pt-20 pb-6 w-full flex items-center'>
+        <section id="home" className='profile mx-auto pb-6 w-full flex items-center'>
           <div className='w-full mx-auto lg:flex flex-col lg:flex-row-reverse justify-center items-center gap-10'>
             <div className={`section-profile-img  flex justify-center items-center p-3 ${ isVisible ? "animate__animated animate__fadeInRight" : " "}`}>
               <div className='img-container flex items-center sm:w-80 sm:h-80 h-72 w-72'>

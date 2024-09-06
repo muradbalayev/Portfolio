@@ -23,7 +23,7 @@ const cardData = [
     githubLink: 'https://github.com/muradbalayev/iticketclone'
   },
   {
-    title: 'This React website incorporates login authentication, a dashboard featuring CRUD operations for managing users, posts, products, and more. Additionally, it includes a To-Do App integrated with an API. Username: kminchelle, Password:0lelplR',
+    title: 'This React website incorporates login authentication, a dashboard featuring CRUD operations for managing users, posts, products, and more. Additionally, it includes a To-Do App integrated with an API. Username: emilys, Password:emilyspass',
     image: azerqaz,
     demoLink: 'https://azerqaz.netlify.app',
     githubLink: 'https://github.com/muradbalayev/Azerqaz'
