@@ -7,9 +7,16 @@ import restaurant from "../assets/restaurant.png"
 import azerqaz from '../assets/azerqaz.png'
 import todoapp from '../assets/todoapp.png'
 import threads from '../assets/threads.png'
+import coffeeme from '../assets/coffeeme.png'
 import { useTypewriter } from 'react-simple-typewriter'
 
 const cardData = [
+  {
+    title: 'Developing and maintaining the landing page, admin panel and partner application for CoffeeMe using React, Redux Toolkit and Redux Toolkit Query.',
+    image: coffeeme,
+    demoLink: 'https://coffeeme.app',
+    githubLink: 'https://github.com/muradbalayev/CoffeeMe---LandPage'
+  },
   {
     title: 'FullStack ThreadsClone w/React + Vite + ChakraUI + MongoDB + Socket.io',
     image: threads,
@@ -87,7 +94,7 @@ const Projects = () => {
                 <div className='buttons flex gap-3'>
                   <a target='_blank' rel="noreferrer" href={card.demoLink}>
                     <button className='poppins py-2 px-5 border hover:text-white hover:scale-105 hover:bg-blue-600 rounded-lg transition-all duration-300 ease-linear bg-white font-semibold'>
-                      Demo
+                      Live
                     </button>
                   </a>
                   <a target='_blank' rel="noreferrer" href={card.githubLink}>
