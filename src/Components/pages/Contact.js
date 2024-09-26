@@ -4,7 +4,7 @@ import { github } from 'react-icons-kit/icomoon/github'
 import { linkedin } from 'react-icons-kit/icomoon/linkedin'
 import { map2 } from 'react-icons-kit/icomoon/map2'
 import { ic_email_outline } from 'react-icons-kit/md/ic_email_outline'
-import resume from '../assets/MuradBalazadə.pdf'
+import resume from '../assets/MuradBalazadaCV.pdf'
 
 const Contact = () => {
     return (
