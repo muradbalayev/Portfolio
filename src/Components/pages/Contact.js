@@ -4,21 +4,24 @@ import { github } from 'react-icons-kit/icomoon/github'
 import { linkedin } from 'react-icons-kit/icomoon/linkedin'
 import { map2 } from 'react-icons-kit/icomoon/map2'
 import { ic_email_outline } from 'react-icons-kit/md/ic_email_outline'
-import resume from '../assets/MuradBalazadaCV.pdf'
+import resume from '../assets/MuradBalazadaCv.pdf'
 
 const Contact = () => {
     return (
         <section id="contact" className='contact-section w-full mx-auto flex flex-col items-center py-36 px-2 my-10'>
             <h1 className='text-3xl text-blue-600 font-bold'>Contact Me</h1>
             <div className='my-6'>
-                <a 
+                <a
                     href={resume} // Replace with your actual CV path or URL
                     download='MuradBalazadəResume'
-                    className='bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition'
+                    className='relative inline-block text-white font-semibold py-2 px-6 rounded-lg shadow-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:text-white transition-all duration-300 ease-in-out'
                 >
-                    Download CV
+                    <span className="absolute inset-0 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 rounded-lg blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-500"></span>
+                    <span className='relative z-10'>Download CV</span>
                 </a>
             </div>
+
+
             <div className='contacts w-full h-full grid lg:grid-cols-2 grid-cols-1 gap-4 p-4 mb-8'>
                 <div className='contact flex items-center ps-4 p-2  border rounded-lg gap-5'>
                     <div className='flex items-center max-w-16'>

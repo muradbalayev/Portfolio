@@ -83,7 +83,7 @@ const Skills = () => {
                     <img src={netlifypng} alt='skill' width={35} />
                     <p className=' font-semibold'>Netlify</p>
                 </div>
-                <div className='skills-container  py-2 px-5 border border-slate-400 rounded-2xl w-32 h-16 flex justify-center items-center gap-2'>
+                <div className='skills-container  py-2 px-5 border border-slate-400 rounded-2xl w-36 h-16 flex justify-center items-center gap-2'>
                     <img src={mongo} alt='skill' width={35} />
                     <p className=' font-semibold'>MongoDB</p>
                 </div>
