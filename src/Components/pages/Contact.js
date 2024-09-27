@@ -14,10 +14,9 @@ const Contact = () => {
                 <a
                     href={resume} // Replace with your actual CV path or URL
                     download='MuradBalazadəResume'
-                    className='relative inline-block text-white font-semibold py-2 px-6 rounded-lg shadow-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:text-white transition-all duration-300 ease-in-out'
+                    className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:from-purple-600 hover:to-pink-600 hover:shadow-xl transition-all duration-300 ease-in-out'
                 >
-                    <span className="absolute inset-0 bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 rounded-lg blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-500"></span>
-                    <span className='relative z-10'>Download CV</span>
+                    Download CV
                 </a>
             </div>
 

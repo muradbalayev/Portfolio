@@ -29,8 +29,8 @@ const About = () => {
               <div className=' flex flex-col mx-auto justify-center sm:text-lg text-base p-2'>
                 <p className='font-medium text-left'><b>Name</b>: Murad Balazada</p>
                 <p className='font-medium text-left'><b>Education</b>: Process Automation Engineer</p>
-                <p className='font-medium text-left'><b>University</b>: ASOIU</p>
-                <p className='font-medium text-left'><b>Email</b>: muradbalazade6@gmail.com</p>
+                <p className='font-medium text-left'><b>University</b>: ASOIU, ATU</p>
+                <p className='font-medium text-left'><b>Email</b>: muradbalazade@yahoo.com</p>
               </div>
               <div className=' mt-6 rounded-xl sm:text-lg text-sm border-2 border-gray-400 flex flex-col justify-start p-3 '>
                 <p className='text-black font-medium text-left poppins'>Experience: Front-end Development</p>
