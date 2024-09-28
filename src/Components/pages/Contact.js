@@ -4,13 +4,13 @@ import { github } from 'react-icons-kit/icomoon/github'
 import { linkedin } from 'react-icons-kit/icomoon/linkedin'
 import { map2 } from 'react-icons-kit/icomoon/map2'
 import { ic_email_outline } from 'react-icons-kit/md/ic_email_outline'
-import resume from '../assets/MuradBalazadaCv.pdf'
+// import resume from '../assets/MuradBalazadaCv.pdf'
 
 const Contact = () => {
     return (
         <section id="contact" className='contact-section w-full mx-auto flex flex-col items-center py-36 px-2 my-10'>
             <h1 className='text-3xl text-blue-600 font-bold'>Contact Me</h1>
-            <div className='my-6'>
+            {/* <div className='my-6'>
                 <a
                     href={resume} 
                     download='MuradBalazadəResume'
@@ -18,7 +18,7 @@ const Contact = () => {
                 >
                     Download CV
                 </a>
-            </div>
+            </div> */}
 
 
             <div className='contacts w-full h-full grid lg:grid-cols-2 grid-cols-1 gap-4 p-4 mb-8'>
