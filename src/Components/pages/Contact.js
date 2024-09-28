@@ -12,7 +12,7 @@ const Contact = () => {
             <h1 className='text-3xl text-blue-600 font-bold'>Contact Me</h1>
             <div className='my-6'>
                 <a
-                    href={resume} // Replace with your actual CV path or URL
+                    href={resume} 
                     download='MuradBalazadəResume'
                     className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:from-purple-600 hover:to-pink-600 hover:shadow-xl transition-all duration-300 ease-in-out'
                 >
