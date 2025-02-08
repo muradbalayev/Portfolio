@@ -8,9 +8,16 @@ import azerqaz from '../assets/azerqaz.png'
 import todoapp from '../assets/todoapp.png'
 import threads from '../assets/threads.png'
 import coffeeme from '../assets/coffeeme.png'
+import bright from '../assets/bright.png'
 import { useTypewriter } from 'react-simple-typewriter'
 
 const cardData = [
+  {
+    title: 'Built Bright Academy website in 2 days using React, Tailwind CSS, ShadCN, GSAP, and Framer Motion for dynamic and interactive user experiences.',
+    image: bright,
+    demoLink: 'https://bright-academy.vercel.app',
+    githubLink: 'https://github.com/muradbalayev/BrightAcademy'
+  },
   {
     title: 'Developing and maintaining the landing page, admin panel and partner application for CoffeeMe using React, Redux Toolkit and Redux Toolkit Query.',
     image: coffeeme,
