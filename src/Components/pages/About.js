@@ -1,50 +1,111 @@
-        import React from 'react'
+import React from 'react'
+import { motion } from 'framer-motion'
 import aboutimg from "../assets/about.jpeg"
-import circletext from "../assets/text2.svg"
 import workingemoji from "../assets/working-emoji.png"
+import circletext from "../assets/text2.svg"
 const About = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 }
+  };
+
   return (
- 
-        <section id="about" className={`about w-full mx-auto flex-col items-center justify-center py-10 `}>
-          <h1 className={`text-center m-3 mb-8 text-4xl font-bold `}>About Me</h1>
-          <div className='w-full mx-auto lg:flex flex-col lg:flex-row justify-center items-center gap-20'>
-            <div className={`section-about-img m-2 flex justify-center items-center `}>
-              <div className='about-img md:max-w-md max-w-80  relative'>
-                <img className='aboutimg' src={aboutimg} alt='img' />
-                <img className='absolute bottom-0 right-0 z-10' width={65} src={workingemoji} alt='text' />
-                <div className='circle absolute -right-10 -bottom-10 max-w-36'>
+    <section id="about" className='about w-full mx-auto py-20 px-4'>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+        className='max-w-[1440px] mx-auto'
+      >
+        <motion.h1 
+          variants={itemVariants}
+          className='text-center mb-16 text-4xl font-bold'
+        >
+          About Me
+        </motion.h1>
+
+        <div className='grid lg:grid-cols-2 gap-16 items-center'>
+          <motion.div 
+            variants={itemVariants}
+            className='relative group'
+          >
+            <div className='relative z-10'>
+              <img 
+                className='rounded-2xl w-full object-cover shadow-xl'
+                src={aboutimg} 
+                alt='Profile' 
+              />
+              <div className='circle absolute -right-8 -bottom-10 max-w-36'>
                   <img src={circletext} alt='text' />
+                </div>
+              <img 
+                className='absolute bottom-0 right-[2px] z-20 w-[76px]'
+                src={workingemoji} 
+                alt='emoji'
+              />
+            </div>
+            <div className='absolute inset-0 bg-blue-500/10 rounded-2xl blur-3xl group-hover:bg-blue-500/20 transition-all duration-500' />
+          </motion.div>
+
+          <motion.div 
+            variants={itemVariants}
+            className='space-y-6'
+          >
+            <div className='space-y-4'>
+              <h2 className='text-2xl font-bold text-blue-500'>
+                Front-end Developer
+                <span className='text-gray-400 ml-2'>based in Baku, Azerbaijan 📍</span>
+              </h2>
+              <p className='text-gray-400 leading-relaxed'>
+                Hey, my name is Murad, I'm 21, and I'm a Frontend Developer. 
+                My passion is to create and develop clean, user-friendly websites that provide 
+                exceptional user experiences.
+              </p>
+              <p className='text-gray-400 leading-relaxed'>
+                My core stack is React.js and Redux, enhanced with Tailwind CSS for styling. 
+                I'm constantly learning and adapting to new technologies to stay at the forefront 
+                of web development.
+              </p>
+            </div>
+
+            <div className='space-y-3 bg-secondary/50 p-6 rounded-xl border border-gray-700'>
+              <h3 className='text-xl font-semibold mb-4'>Personal Information</h3>
+              <div className='grid sm:grid-cols-2 gap-4'>
+                <div className='space-y-2'>
+                  <p className='text-gray-400'><span className='text-blue-500 font-medium'>Name:</span> Murad Balazada</p>
+                  <p className='text-gray-400'><span className='text-blue-500 font-medium'>Education:</span> Process Automation Engineer</p>
+                </div>
+                <div className='space-y-2'>
+                  <p className='text-gray-400'><span className='text-blue-500 font-medium'>University:</span> ASOIU, ATU</p>
+                  <p className='text-gray-400'><span className='text-blue-500 font-medium'>Email:</span> muradbalazade@yahoo.com</p>
                 </div>
               </div>
             </div>
-            <div className={`section-text flex flex-col justify-center lg:items-start items-center p-3 mt-5`}>
-              <div className='w-full mx-auto texts sm:text-lg text-base p-2 flex flex-col justify-center items-start gap-5 max-w-96'>
-                <h1 className='sm:text-2xl text-xl text-center relative font-bold  '>
-                  Front-end Developer
-                  based in Baku, Azerbaijan 📍
-                </h1>
-                <p className=' font-medium lg:text-start text-center'>Hey, my name is Murad, I'm 21, and I'm a Frontend Developer. My passion is to create and develop a clean Web Site for my users. 📍</p>
-                <p className=' font-medium lg:text-start text-center'>My main stack currently is React.js, Redux in combination with Tailwind CSS and Material</p>
-              </div>
-              <div className=' flex flex-col mx-auto justify-center sm:text-lg text-base p-2'>
-                <p className='font-medium text-left'><b>Name</b>: Murad Balazada</p>
-                <p className='font-medium text-left'><b>Education</b>: Process Automation Engineer</p>
-                <p className='font-medium text-left'><b>University</b>: ASOIU, ATU</p>
-                <p className='font-medium text-left'><b>Email</b>: muradbalazade@yahoo.com</p>
-              </div>
-              <div className=' mt-6 rounded-xl sm:text-lg text-sm border-2 border-gray-400 flex flex-col justify-start p-3 '>
-                <p className='text-black font-medium text-left poppins'>Experience: Front-end Development</p>
-                <p className='text-black font-base text-left poppins'>Front-end Dev Course - EvoCoding | 2022</p>
-                <p className='text-black font-base text-left poppins'>Front-end Dev Course - Algorithmics | 2023</p>
-                <p className='text-black font-base poppins'>Front-end Dev Intern - Caspian Innovation Center | 2024</p>
-                <p className='text-black font-base poppins'>Front-end Dev Mentor - EvoAcademy | 2024 - Still</p>
-                <p className='text-black font-base poppins'>Front-end Dev - CoffeeMe | 2024 - Still</p>
 
-
+            <div className='space-y-3 bg-secondary/50 p-6 rounded-xl border border-gray-700'>
+              <h3 className='text-xl font-semibold mb-4'>Experience</h3>
+              <div className='space-y-2'>
+                <p className='text-gray-400'><span className='text-blue-500 font-medium'>Front-end Dev Intern</span> - Caspian Innovation Center | 02.2024 - 06.2024</p>
+                <p className='text-gray-400'><span className='text-blue-500 font-medium'>Front-end Dev Mentor</span> - EvoAcademy | 07.2024 - 10.2024</p>
+                <p className='text-gray-400'><span className='text-blue-500 font-medium'>React Developer</span> - CoffeeMe | 08.2024 - Present</p>
               </div>
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
   )
 }
 

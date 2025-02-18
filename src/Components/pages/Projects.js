@@ -1,22 +1,19 @@
 import React from 'react'
 import iticket from '../assets/iticket.png'
 import gymsite from "../assets/gymsite.png"
-import weatherapp from "../assets/weatherapp.png"
-import proteinshop from "../assets/proteinshop.png"
-import restaurant from "../assets/restaurant.png"
 import azerqaz from '../assets/azerqaz.png'
-import todoapp from '../assets/todoapp.png'
 import threads from '../assets/threads.png'
 import coffeeme from '../assets/coffeeme.png'
-import bright from '../assets/bright.png'
+import evo from '../assets/evo.png'
 import { useTypewriter } from 'react-simple-typewriter'
+import { motion } from 'framer-motion'
 
 const cardData = [
   {
-    title: 'Built Bright Academy website in 2 days using React, Tailwind CSS, ShadCN, GSAP, and Framer Motion for dynamic and interactive user experiences.',
-    image: bright,
-    demoLink: 'https://bright-academy.vercel.app',
-    githubLink: 'https://github.com/muradbalayev/BrightAcademy'
+    title: 'I built the EvoAcademy website using React, Tailwind CSS, ShadCN, GSAP, and Framer Motion to deliver a dynamic and interactive user experience.In addition to creating a visually engaging front- end, I developed a comprehensive admin panel that empowers the client to manage the platform efficiently.',
+    image: evo,
+    demoLink: 'https://evo-academy.vercel.app',
+    githubLink: 'https://github.com/muradbalayev/EvoAcademy'
   },
   {
     title: 'Developing and maintaining the landing page, admin panel and partner application for CoffeeMe using React, Redux Toolkit and Redux Toolkit Query.',
@@ -43,35 +40,11 @@ const cardData = [
     githubLink: 'https://github.com/muradbalayev/Azerqaz'
   },
   {
-    title: 'FullStack ToDo App w/Next.JS + MongoDB',
-    image: todoapp,
-    demoLink: 'https://todo-app-mongo.vercel.app',
-    githubLink: 'https://github.com/muradbalayev/TodoApp-Next.js-Mongo'
-  },
-  {
     title: 'Responsive Multi-Page Gym Website with HTML, CSS, and JS',
     image: gymsite,
     demoLink: 'https://muradsgymsite.netlify.app',
     githubLink: 'https://github.com/muradbalayev/GymSite'
   },
-  {
-    title: 'A Real-Time Responsive Weather Forecast Site',
-    image: weatherapp,
-    demoLink: 'https://havaproqnozuapi.netlify.app/',
-    githubLink: 'https://github.com/muradbalayev/WeatherApp-Vite-Tailwind'
-  },
-  {
-    title: 'A Responsive Protein Shop Site',
-    image: proteinshop,
-    demoLink: 'https://anabolicshop.netlify.app',
-    githubLink: 'https://github.com/muradbalayev/AnabolicShop'
-  },
-  {
-    title: 'Responsive Restaurant Website with HTML, CSS, and JS',
-    image: restaurant,
-    demoLink: 'https://simplerestaurantwebsite.netlify.app',
-    githubLink: 'https://github.com/muradbalayev/Restaurant'
-  }
 ];
 
 
@@ -84,38 +57,101 @@ const Projects = () => {
     delaySpeed: 2000
   });
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 }
+  };
+
   return (
-    <section id="projects" className='projects-section w-full mx-auto flex flex-col items-center py-10 '>
-      <h1 className={`text-center m-3 mb-3 text-4xl font-bold `}>Projects</h1>
-      <div className='projects p-4 mt-10 mx-auto flex flex-col flex-wrap justify-center items-center gap-4'>
-        <div className='cards p-2 w-full flex lg:flex-row flex-col justify-center flex-wrap gap-6'>
+    <section id="projects" className='projects-section w-full mx-auto py-20 px-4'>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+        className='max-w-7xl mx-auto'
+      >
+        <motion.h1
+          variants={itemVariants}
+          className='text-center mb-16 text-4xl font-bold'
+        >
+          Featured Projects
+        </motion.h1>
+
+        <motion.div
+          variants={itemVariants}
+          className='grid lg:grid-cols-2 gap-8'
+        >
           {cardData.map((card, index) => (
-            <div className='card rounded-xl border border-slate-300 bg-[#f5f5f5] max-w-md p-4 flex flex-col justify-between items-center'>
-              <div className='flex flex-col'>
-                <div className='card-img rounded-md max-w-92 h-56 border border-gray-400 shadow-md'>
-                  <img src={card.image} alt='site' />
-                </div>
-                <p className='card-title poppins font-medium text-center mt-5'>{card.title}</p>
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ y: -10 }}
+              className='group relative bg-secondary/50 rounded-xl overflow-hidden border border-gray-700'
+            >
+              <div className='relative aspect-video overflow-hidden'>
+                <img
+                  src={card.image}
+                  alt='project preview'
+                  className='w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:filter-none filter brightness-75'
+                />
+                <div className='absolute inset-0 bg-gradient-to-t from-secondary/90 to-transparent' />
               </div>
-              <div className='card-text mt-2 w-full p-3 flex flex-col justify-between items-center gap-3'>
-                <div className='buttons flex gap-3'>
-                  <a target='_blank' rel="noreferrer" href={card.demoLink}>
-                    <button className='poppins py-2 px-5 border hover:text-white hover:scale-105 hover:bg-blue-600 rounded-lg transition-all duration-300 ease-linear bg-white font-semibold'>
-                      Live
-                    </button>
-                  </a>
-                  <a target='_blank' rel="noreferrer" href={card.githubLink}>
-                    <button className='poppins py-2 px-5 group border hover:text-white hover:scale-105 hover:bg-black rounded-lg transition-all duration-300 ease-linear bg-white font-semibold'>
-                      Github
-                    </button>
-                  </a>
+
+              <div className='p-6 space-y-4'>
+                <h3 className='text-xl font-semibold text-blue-500'>
+                  {card.title.split(' w/')[0]}
+                </h3>
+
+                <p className='text-gray-400 text-sm'>
+                  {card.title.includes('w/') ? `Tech Stack: ${card.title.split('w/')[1]}` : ''}
+                </p>
+
+                <div className='flex gap-4'>
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    href={card.demoLink}
+                    target='_blank'
+                    rel="noreferrer"
+                    className='px-6 py-2 rounded-lg bg-blue-500 text-white font-medium hover:bg-blue-600 transition-colors'
+                  >
+                    Live Demo
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.05 }}
+                    href={card.githubLink}
+                    target='_blank'
+                    rel="noreferrer"
+                    className='px-6 py-2 rounded-lg border border-gray-700 hover:border-blue-500 hover:text-blue-500 transition-colors'
+                  >
+                    Source Code
+                  </motion.a>
                 </div>
               </div>
-            </div>
+
+              <div className='absolute inset-0 bg-blue-500/10 blur-3xl group-hover:bg-blue-500/20 transition-all duration-500 -z-10' />
+            </motion.div>
           ))}
-        </div>
-        <h1 className='text-2xl text-center font-bold mt-6'>New projects coming soon{text} </h1>
-      </div>
+        </motion.div>
+
+        <motion.h2
+          variants={itemVariants}
+          className='text-2xl text-center font-bold mt-16 text-gray-400'
+        >
+          New projects coming soon{text}
+        </motion.h2>
+      </motion.div>
     </section>
   )
 }

@@ -1,64 +1,126 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import Icon from 'react-icons-kit'
 import { github } from 'react-icons-kit/icomoon/github'
 import { linkedin } from 'react-icons-kit/icomoon/linkedin'
 import { map2 } from 'react-icons-kit/icomoon/map2'
 import { ic_email_outline } from 'react-icons-kit/md/ic_email_outline'
-import resume from '../assets/MuradBalazadaCV.pdf'
+import resume from '../assets/MuradBalazadaResume.pdf'
+import { download } from 'react-icons-kit/feather/download'
 
 const Contact = () => {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: { y: 0, opacity: 1 }
+    };
+
+    const contactInfo = [
+        {
+            icon: map2,
+            title: "Location",
+            content: "Baku, Azerbaijan",
+            link: null
+        },
+        {
+            icon: ic_email_outline,
+            title: "Mail",
+            content: "muradbalazade@yahoo.com",
+            link: "mailto:muradbalazade@yahoo.com"
+        },
+        {
+            icon: github,
+            title: "Github",
+            content: "github.com/muradbalayev",
+            link: "https://github.com/muradbalayev"
+        },
+        {
+            icon: linkedin,
+            title: "LinkedIn",
+            content: "Murad Balazada",
+            link: "https://www.linkedin.com/in/murad-balazada-b07593267"
+        }
+    ];
+
     return (
-        <section id="contact" className='contact-section w-full mx-auto flex flex-col items-center py-36 px-2 my-10'>
-            <h1 className='text-3xl text-blue-600 font-bold'>Contact Me</h1>
-            <div className='my-6'>
-                <a
-                    href={resume} 
-                    download='MuradBalazadəResume'
-                    className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:from-purple-600 hover:to-pink-600 hover:shadow-xl transition-all duration-300 ease-in-out'
+        <section id="contact" className='contact-section w-full mx-auto py-20 px-4'>
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={containerVariants}
+                className='max-w-[1440px] mx-auto'
+            >
+                <motion.div variants={itemVariants} className='text-center space-y-4 mb-16'>
+                    <h1 className='text-4xl font-bold'>Get In Touch</h1>
+                    <p className='text-gray-400 max-w-2xl mx-auto'>
+                        I'm currently looking for new opportunities. Whether you have a question or just want to say hi, 
+                        I'll try my best to get back to you!
+                    </p>
+                </motion.div>
+
+                <div className='grid lg:grid-cols-2 gap-8 mb-12'>
+                    {contactInfo.map((info, index) => (
+                        <motion.div
+                            key={index}
+                            variants={itemVariants}
+                            whileHover={{ y: -5 }}
+                            onClick={() => info.link && window.open(info.link, '_blank')}
+                            className={`group relative bg-secondary/50 rounded-xl overflow-hidden border border-gray-700 p-6 
+                                ${info.link ? 'cursor-pointer' : ''}`}
+                        >
+                            <div className='flex items-center gap-6'>
+                                <div className='flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors'>
+                                    <Icon className='text-primary' icon={info.icon} size={24} />
+                                </div>
+                                <div className='space-y-1'>
+                                    <h3 className='font-bold text-xl'>{info.title}</h3>
+                                    <p className={`text-gray-400 ${info.link ? 'group-hover:text-primary' : ''} transition-colors`}>
+                                        {info.content}
+                                    </p>
+                                </div>
+                            </div>
+                            {/* Gradient effect */}
+                            <div className='absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+                        </motion.div>
+                    ))}
+                </div>
+
+                <motion.div 
+                    variants={itemVariants}
+                    className='flex justify-center'
                 >
-                    Download CV
-                </a>
-            </div>
-
-
-            <div className='contacts w-full h-full grid lg:grid-cols-2 grid-cols-1 gap-4 p-4 mb-8'>
-                <div className='contact flex items-center ps-4 p-2  border rounded-lg gap-5'>
-                    <div className='flex items-center max-w-16'>
-                        <Icon className='text-blue-600' icon={map2} size={27} />
-                    </div>
-                    <div className='flex flex-col gap-2 justify-center p-2'>
-                        <h3 className='font-bold text-xl'>Location</h3>
-                        <p>Baku, Azerbaijan</p>
-                    </div>
-                </div>
-                <div className='contact flex items-center ps-4 p-2 border rounded-lg gap-5'>
-                    <div className='flex items-center max-w-16'>
-                        <Icon className='text-blue-600' icon={ic_email_outline} size={33} />
-                    </div>
-                    <div className='flex flex-col gap-2 justify-center p-2'>
-                        <h3 className='font-bold text-xl'>Mail</h3>
-                        <p>muradbalazade@yahoo.com</p>
-                    </div>
-                </div>
-                <div className='contact flex items-center ps-4 p-2  border rounded-lg gap-5'>
-                    <div className='flex items-center max-w-16'>
-                        <Icon className='text-blue-600' size={30} icon={github} />
-                    </div>
-                    <div className='flex flex-col gap-2 justify-center p-2'>
-                        <h3 className='font-bold text-xl'>Github</h3>
-                        <a className='hover:text-blue-600' target='_blank' rel="noreferrer" href='https://github.com/muradbalayev'>github.com/muradbalayev</a>
-                    </div>
-                </div>
-                <div className='contact flex items-center ps-4 p-2 border rounded-lg gap-5'>
-                    <div className='flex items-center max-w-16'>
-                        <Icon className='text-blue-600' size={30} icon={linkedin} />
-                    </div>
-                    <div className='flex flex-col gap-2 justify-center p-2 overflow-hidden'>
-                        <h3 className='font-bold text-xl'>Linkedin</h3>
-                        <a className='hover:text-blue-600' target='_blank' rel="noreferrer" href='https://www.linkedin.com/in/murad-balazade-b07593267/'>https://www.linkedin.com/in/murad-balazade-b07593267/</a>
-                    </div>
-                </div>
-            </div>
+                    <motion.a
+                        href={resume}
+                        download='MuradBalazadaResume'
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className='relative inline-flex items-center justify-center group'
+                    >
+                        <span className='relative px-8 py-4 bg-secondary text-white font-semibold rounded-lg 
+                            transition-all duration-300 ease-in-out border border-gray-700 
+                            hover:border-primary hover:shadow-lg hover:shadow-primary/25
+                            flex items-center gap-3'
+                        >
+                            <Icon icon={download} size={20} className='text-primary' />
+                            Download Resume
+                            <span className='absolute inset-0 rounded-lg bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 
+                                opacity-0 group-hover:opacity-100 group-hover:animate-shimmer'
+                            />
+                        </span>
+                    </motion.a>
+                </motion.div>
+            </motion.div>
         </section>
     )
 }

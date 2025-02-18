@@ -2,144 +2,151 @@ import React, { useEffect, useState } from "react";
 import { Icon } from "react-icons-kit";
 import { alignRight } from "react-icons-kit/feather/alignRight";
 import { close } from "react-icons-kit/ionicons/close";
-import { Events, Link, scrollSpy } from "react-scroll";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const [isScrolling, setIsScrolling] = useState(false);
 
+  // Handle navbar show/hide on scroll
   useEffect(() => {
-    Events.scrollEvent.register("begin", function () {
-      console.log("begin", arguments);
-    });
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
 
-    Events.scrollEvent.register("end", function (to) {
-      setActiveSection(to);
-    });
+      if (!isScrolling) {
+        const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+        const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-    scrollSpy.update(); // Important to ensure scroll events are being tracked
-
-    return () => {
-      Events.scrollEvent.remove("begin");
-      Events.scrollEvent.remove("end");
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const { offsetTop, offsetHeight } = element;
+            if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+              setActiveSection(section);
+              break;
+            }
+          }
+        }
+      }
     };
-  }, []);
 
-  const handleSetActive = (to) => {
-    setActiveSection(to);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos, isScrolling]);
+
+  const scrollToSection = (sectionId) => {
+    setIsScrolling(true);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      setActiveSection(sectionId);
+      const navHeight = document.querySelector('nav').offsetHeight;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+
+      // Reset isScrolling after animation completes
+      setTimeout(() => {
+        setIsScrolling(false);
+      }, 1000);
+    }
   };
+
+  const navItems = [
+    { name: 'Home', to: 'home' },
+    { name: 'About', to: 'about' },
+    { name: 'Skills', to: 'skills' },
+    { name: 'Projects', to: 'projects' },
+    { name: 'Contact', to: 'contact' }
+  ];
 
   return (
     <div className="w-full mx-auto">
-      <nav className="flex justify-between items-center fixed w-full bg-white z-50 border-b">
+      <motion.nav 
+        initial={{ y: 0 }}
+        animate={{ y: visible ? 0 : -100 }}
+        transition={{ duration: 0.3 }}
+        className="flex justify-between items-center fixed w-full z-50 border-b px-8"
+      >
         <div className="nav-left">
-          <a
-            href="https://github.com/muradbalayev"
-            target="_blank"
-            rel="noreferrer"
+          <button
+            onClick={() => scrollToSection('home')}
             className="name font-bold cursor-pointer relative"
           >
             Murad.dev
-          </a>
+          </button>
         </div>
         <div className="nav-right md:block hidden">
           <ul className="flex list-none gap-2">
-            <Link onSetActive={handleSetActive} spy={true} to="home" smooth={true} duration={200}>
-              <li className={`font-bold rounded cursor-pointer ${activeSection === 'home' ? 'active' : ''}`}>Home</li>
-            </Link>
-            <Link onSetActive={handleSetActive} spy={true} to="about" smooth={true} offset={0} duration={200}>
-              <li className={`font-bold rounded cursor-pointer ${activeSection === 'about' ? 'active' : ''}`}>About</li>
-            </Link>
-            <Link onSetActive={handleSetActive} spy={true} to="skills" smooth={true} offset={0} duration={200}>
-              <li className={`font-bold rounded cursor-pointer ${activeSection === 'skills' ? 'active' : ''}`}>Skills</li>
-            </Link>
-            <Link onSetActive={handleSetActive} spy={true} to="projects" smooth={true} offset={0} duration={200}>
-              <li className={`font-bold rounded cursor-pointer ${activeSection === 'projects' ? 'active' : ''}`}>Projects</li>
-            </Link>
-            <Link onSetActive={handleSetActive} spy={true} to="contact" smooth={true} offset={0} duration={200}>
-              <li className={`font-bold rounded cursor-pointer ${activeSection === 'contact' ? 'active' : ''}`}>Contact</li>
-            </Link>
+            {navItems.map((item) => (
+              <button
+                key={item.to}
+                onClick={() => scrollToSection(item.to)}
+                className={`font-bold rounded cursor-pointer transition-all duration-300 ${
+                  activeSection === item.to ? 'active' : ''
+                }`}
+              >
+                <li>{item.name}</li>
+              </button>
+            ))}
           </ul>
         </div>
         <button
-          onClick={() => {
-            setOpen(true);
-          }}
+          onClick={() => setOpen(true)}
           className="md:hidden block transition-colors rounded-lg p-2 hover:text-white hover:bg-slate-800 cursor-pointer"
         >
           <Icon icon={alignRight} size={25} />
         </button>
-      </nav>
+      </motion.nav>
 
-      <div
-        className={`navbar fixed top-0 right-0 flex justify-center items-center h-screen transition-all duration-700 z-50 ${
-          open ? "w-full flex-grow" : "  w-0"
-        }`}
-      >
-        <button
-          onClick={() => {
-            setOpen(false);
-          }}
-          className={`p-1 transition-colors absolute hover:text-red-500 top-5 right-5 z-50 ${
-            open ? "block" : "hidden"
-          }`}
-        >
-          <Icon icon={close} size={30} />
-        </button>
-        <div className={`w-full relative ${open ? "block" : "hidden"}`}>
-          <ul className="list-none w-full text-white">
-            <Link className="text-white" to="home" smooth={true} duration={300}>
-              <li className="font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900">
-                Home
-              </li>
-            </Link>
-            <Link
-              className="text-white"
-              to="about"
-              smooth={true}
-              offset={-50}
-              duration={300}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="navbar fixed top-0 right-0 flex justify-center items-center h-screen w-full z-50"
+          >
+            <button
+              onClick={() => setOpen(false)}
+              className="p-1 transition-colors absolute hover:text-red-500 top-5 right-5 z-50"
             >
-              <li className="font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900">
-                About
-              </li>
-            </Link>
-            <Link
-              className="text-white"
-              to="skills"
-              smooth={true}
-              offset={-50}
-              duration={300}
+              <Icon icon={close} size={30} />
+            </button>
+            <motion.div
+              initial={{ x: 100 }}
+              animate={{ x: 0 }}
+              exit={{ x: 100 }}
+              className="w-full"
             >
-              <li className="font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900">
-                Skills
-              </li>
-            </Link>
-            <Link
-              className="text-white"
-              to="projects"
-              smooth={true}
-              offset={-50}
-              duration={300}
-            >
-              <li className="font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900">
-                Projects
-              </li>
-            </Link>
-            <Link
-              className="text-white"
-              to="contact"
-              smooth={true}
-              offset={-50}
-              duration={300}
-            >
-              <li className="font-bold text-center text-2xl cursor-pointer  hover:bg-slate-900">
-                Contact
-              </li>
-            </Link>
-          </ul>
-        </div>
-      </div>
+              <ul className="list-none w-full text-white">
+                {navItems.map((item) => (
+                  <button
+                    key={item.to}
+                    onClick={() => {
+                      scrollToSection(item.to);
+                      setOpen(false);
+                    }}
+                    className="w-full"
+                  >
+                    <li className="font-bold text-center text-2xl cursor-pointer hover:bg-slate-900 py-4">
+                      {item.name}
+                    </li>
+                  </button>
+                ))}
+              </ul>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
