@@ -70,7 +70,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className='w-full max-w-[1200px] mx-auto px-4 lg:flex flex-col lg:flex-row-reverse justify-center items-center gap-16'>
+      <div className='w-full max-w-[1200px] mx-auto px-4 min-1200:flex flex-col min-1200:flex-row-reverse justify-center items-center gap-16'>
         {/* Profile Image */}
         <motion.div 
           className='relative group lg:flex-shrink-0'
@@ -78,35 +78,25 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
         >
           <motion.div 
-            className='img-container relative flex items-center sm:w-[450px] sm:h-[450px] h-72 w-72 group-hover:shadow-[0_0_30px_rgba(20,87,231,0.3)]'
+            className='img-container relative mx-auto flex items-center justify-center min-1200:w-[450px] min-1200:h-[450px] md:w-[420px] md:h-[420px] sm:w-[380px] sm:h-[380px] h-72 w-72 group-hover:shadow-[0_0_30px_rgba(20,87,231,0.3)]'
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <img src={profileimage} alt='profileimage' className='relative z-10' />
+            <img src={profileimage} alt='profileimage' className='relative z-10 w-full h-full mx-auto' />
             {/* Lighting effect */}
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/0 to-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
           </motion.div>
           {/* Animated border */}
-          <motion.div 
-            className="absolute -inset-0.5 bg-gradient-to-r from-primary to-blue-600 rounded-full opacity-30 group-hover:opacity-100 blur-sm transition duration-300"
-            animate={{
-              backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: 'linear'
-            }}
-          />
+
         </motion.div>
 
         {/* Text Content */}
         <motion.div 
-          className='section-text flex justify-center items-center p-3 lg:flex-1'
+          className='section-text flex justify-center items-center p-3 min-1200:flex-1'
           variants={itemVariants}
           transition={{ duration: 0.5 }}
         >
-          <div className='texts flex flex-col justify-center lg:items-start items-center gap-6 w-full'>
+          <div className='texts flex flex-col justify-center min-1200:items-start items-center gap-6 w-full'>
             <motion.span 
               variants={itemVariants}
               className='px-4 py-2 bg-blue-500/10 rounded-full text-blue-500 text-sm font-medium inline-block'
@@ -116,7 +106,7 @@ const Hero = () => {
 
             <motion.h1 
               variants={itemVariants}
-              className='md:text-6xl sm:text-5xl text-3xl font-bold lg:text-left text-center whitespace-nowrap'
+              className='md:text-6xl sm:text-5xl text-3xl font-bold min-1200:text-left text-center whitespace-nowrap'
             >
               React {" "}
               <span className='text-primary inline-flex min-w-[120px]'> Devel{text}</span>
@@ -126,7 +116,7 @@ const Hero = () => {
             
             <motion.p 
               variants={itemVariants}
-              className='lg:text-left text-center text-gray-400 text-lg'
+              className='min-1200:text-left text-center text-gray-400 text-lg'
             >
               Hi, I'm Murad Balazada. A passionate Front-end React Developer 
               <br className='hidden md:block' /> based in Baku, Azerbaijan. 📍

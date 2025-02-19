@@ -74,7 +74,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className='projects-section w-full mx-auto py-20 px-4'>
+    <section id="projects" className='projects-section w-full mx-auto min-1200:py-20 py-6 px-4'>
       <motion.div
         initial="hidden"
         whileInView="visible"

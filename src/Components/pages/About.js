@@ -21,7 +21,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className='about w-full mx-auto py-20 px-4'>
+    <section id="about" className='about w-full mx-auto min-1200:py-20 py-6 px-4'>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -36,22 +36,22 @@ const About = () => {
           About Me
         </motion.h1>
 
-        <div className='grid lg:grid-cols-2 gap-16 items-center'>
+        <div className='grid min-1200:grid-cols-2 gap-16 items-center'>
           <motion.div 
             variants={itemVariants}
             className='relative group'
           >
-            <div className='relative z-10'>
+            <div className='relative z-10 min-1200:h-[600px]  md:max-h-[500px]  sm:max-h-[380px] h-72'>
               <img 
-                className='rounded-2xl w-full object-cover shadow-xl'
+                className='rounded-2xl h-full w-full object-cover  shadow-xl'
                 src={aboutimg} 
                 alt='Profile' 
               />
-              <div className='circle absolute -right-8 -bottom-10 max-w-36'>
+              <div className='circle absolute min-1200:-right-8 -right-2 -bottom-10 min-1200:max-w-36 max-w-24'>
                   <img src={circletext} alt='text' />
                 </div>
               <img 
-                className='absolute bottom-0 right-[2px] z-20 w-[76px]'
+                className='absolute min-1200:bottom-0 min-1200:right-[2px] -bottom-3 right-[14px] z-20 min-1200:w-[76px] w-[52px]'
                 src={workingemoji} 
                 alt='emoji'
               />

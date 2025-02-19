@@ -53,7 +53,7 @@ const Contact = () => {
     ];
 
     return (
-        <section id="contact" className='contact-section w-full mx-auto py-20 px-4'>
+        <section id="contact" className='contact-section w-full mx-auto py-6 px-4 md:py-20'>
             <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -113,7 +113,7 @@ const Contact = () => {
                             flex items-center gap-3'
                         >
                             <Icon icon={download} size={20} className='text-primary' />
-                            Download Resume
+                            Download CV
                             <span className='absolute inset-0 rounded-lg bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 
                                 opacity-0 group-hover:opacity-100 group-hover:animate-shimmer'
                             />

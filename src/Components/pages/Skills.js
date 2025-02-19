@@ -47,11 +47,13 @@ const Skills = () => {
                 "GitHub",
                 "VS Code",
                 "Postman",
+                "Source Tree",
                 "Netlify",
                 "Vite",
                 "Vercel",
                 "Figma",
                 "v0",
+                "Notion"
             ]
         }
     ];
@@ -72,7 +74,7 @@ const Skills = () => {
     };
 
     return (
-        <section id="skills" className='skills-section w-full mx-auto flex flex-col items-center py-20'>
+        <section id="skills" className='skills-section w-full mx-auto flex flex-col items-center min-1200:py-20 py-16'>
             <motion.h1 
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
