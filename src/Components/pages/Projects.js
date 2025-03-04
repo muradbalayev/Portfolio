@@ -10,10 +10,9 @@ import { motion } from 'framer-motion'
 
 const cardData = [
   {
-    title: 'I built the EvoAcademy website using React, Tailwind CSS, ShadCN, GSAP, and Framer Motion to deliver a dynamic and interactive user experience.In addition to creating a visually engaging front- end, I developed a comprehensive admin panel that empowers the client to manage the platform efficiently.',
+    title: "Discover the SEO-friendly EvoAcademy website built with React, Tailwind CSS, and Framer Motion. This dynamic, interactive platform features a visually captivating front-end and a comprehensive admin panel, empowering efficient management and delivering a seamless user experience.",
     image: evo,
-    demoLink: 'https://evo-academy.vercel.app',
-    githubLink: 'https://github.com/muradbalayev/EvoAcademy'
+    demoLink: 'https://www.evoacademy.az/',
   },
   {
     title: 'Developing and maintaining the landing page, admin panel and partner application for CoffeeMe using React, Redux Toolkit and Redux Toolkit Query.',
@@ -110,7 +109,7 @@ const Projects = () => {
               </div>
 
               <div className='p-6 space-y-4'>
-                <h3 className='text-xl font-semibold text-blue-500'>
+                <h3 className='md:text-lg font-semibold text-gray-300'>
                   {card.title.split(' w/')[0]}
                 </h3>
 
@@ -128,15 +127,18 @@ const Projects = () => {
                   >
                     Live Demo
                   </motion.a>
-                  <motion.a
-                    whileHover={{ scale: 1.05 }}
-                    href={card.githubLink}
-                    target='_blank'
-                    rel="noreferrer"
-                    className='px-6 py-2 rounded-lg border border-gray-700 hover:border-blue-500 hover:text-blue-500 transition-colors'
-                  >
-                    Source Code
-                  </motion.a>
+                  {card.githubLink &&
+                    <motion.a
+                      whileHover={{ scale: 1.05 }}
+                      href={card.githubLink}
+                      target='_blank'
+                      rel="noreferrer"
+                      className='px-6 py-2 rounded-lg border border-gray-700 hover:border-blue-500 hover:text-blue-500 transition-colors'
+                    >
+                      Source Code
+                    </motion.a>
+                  }
+
                 </div>
               </div>
 
