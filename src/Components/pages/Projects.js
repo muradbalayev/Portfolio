@@ -4,7 +4,7 @@ import gymsite from "../assets/gymsite.png"
 import azerqaz from '../assets/azerqaz.png'
 import threads from '../assets/threads.png'
 import coffeeme from '../assets/coffeeme.png'
-import evo from '../assets/evo.png'
+import evo from '../assets/evoAcademy.png'
 import { useTypewriter } from 'react-simple-typewriter'
 import { motion } from 'framer-motion'
 
