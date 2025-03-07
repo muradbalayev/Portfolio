@@ -48,6 +48,7 @@ const cardData = [
 
 
 const Projects = () => {
+
   const [text] = useTypewriter({
     words: ['...'],
     loop: {},
@@ -125,7 +126,7 @@ const Projects = () => {
                     rel="noreferrer"
                     className='px-6 py-2 rounded-lg bg-blue-500 text-white font-medium hover:bg-blue-600 transition-colors'
                   >
-                    Live Demo
+                    Live
                   </motion.a>
                   {card.githubLink &&
                     <motion.a

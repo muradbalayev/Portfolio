@@ -21,7 +21,7 @@ const Footer = () => {
     },
     {
       icon: linkedin,
-      url: 'https://www.linkedin.com/in/murad-balazada-b07593267',
+      url: 'https://www.linkedin.com/in/murad-balazade',
       label: 'LinkedIn'
     }
   ];
@@ -29,19 +29,7 @@ const Footer = () => {
   return (
     <footer className='relative overflow-hidden border-t border-gray-700'>
       {/* Animated background gradient */}
-      <div className="absolute inset-0 blur-[100px]">
-        <motion.div 
-          className="absolute bottom-0 left-1/3 -translate-x-1/2 rounded-full bg-primary/20 w-[200px] h-[200px]"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.3, 0.2]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-          }}
-        />
-      </div>
+
 
       <div className='max-w-[1440px] mx-auto py-12 px-4'>
         <div className='grid md:grid-cols-3 gap-8 items-center'>

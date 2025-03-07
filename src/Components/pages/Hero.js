@@ -2,9 +2,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import profileimage from "../assets/profileImg.jpg"
 import {github} from 'react-icons-kit/icomoon/github'
-import {instagram} from 'react-icons-kit/fa/instagram'
 import Icon from 'react-icons-kit'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import { linkedin } from 'react-icons-kit/icomoon/linkedin'
 
 const Hero = () => {
   const [text] = useTypewriter({
@@ -130,7 +130,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1, y: -5 }}
                 className='text-white bg-primary px-3 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/25'
                 href='https://github.com/muradbalayev'
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 target='_blank'
               >
                 <Icon icon={github} size={25}/>
@@ -138,11 +138,11 @@ const Hero = () => {
               <motion.a 
                 whileHover={{ scale: 1.1, y: -5 }}
                 className='text-white bg-primary px-3 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary/25'
-                href='https://www.instagram.com/muraesthetics'
-                rel="noreferrer"
+                href='https://www.linkedin.com/in/murad-balazade'
+                rel="noopener noreferrer"
                 target='_blank'
               >
-                <Icon icon={instagram} size={25}/>
+                <Icon icon={linkedin} size={24}/>
               </motion.a>
             </motion.div>
           </div>
